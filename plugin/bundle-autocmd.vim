@@ -2,6 +2,7 @@
 if exists('g:loaded_bundle_autocmd')
   finish
 endif
+let g:loaded_bundle_autocmd=1
 " -------------------------------------------------------------------------- }}}
 " {{{ Auto commands for filetypes.
 autocmd BufRead,BufNewFile *.adoc,*adoci,*.txt,*.asciidoc,README
