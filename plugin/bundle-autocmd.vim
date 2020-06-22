@@ -53,7 +53,7 @@ augroup END
 augroup journal_group 
   autocmd!
   autocmd BufRead,BufNewFile 
-        \ *.txt
+        \ *.journal
         \ setlocal filetype=journal
 augroup END
 
@@ -67,7 +67,7 @@ augroup END
 augroup spell_group 
   autocmd!
   autocmd FileType 
-        \ help,journal,markdown,md,tex,txt
+        \ journal,markdown,md,tex
         \ setlocal spell
 augroup END
 
