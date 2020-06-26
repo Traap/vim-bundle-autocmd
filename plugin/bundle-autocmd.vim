@@ -57,6 +57,11 @@ augroup journal_group
         \ setlocal filetype=journal
 augroup END
 
+augroup json_group
+  autocmd!
+  autocmd FileType json syntax match Comment +\/\/.\+$+
+augroup END
+
 augroup markdown_group
   autocmd!
   autocmd BufRead,BufNewFile 
