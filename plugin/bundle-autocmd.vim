@@ -43,6 +43,12 @@ augroup csv_group
         \ setlocal filetype=csv nowrap tw=0
 augroup END
 
+command! Diary VimwikiDiaryIndex
+augroup diary_group
+  autocmd!
+  autocmd BufRead,BufNewFile journal.wiki VimwikiDiaryGenerateLinks
+augroup end
+
 augroup help_group
   autocmd!
   autocmd FileType 
