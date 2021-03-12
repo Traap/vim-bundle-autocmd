@@ -115,13 +115,12 @@ augroup END
 " -------------------------------------------------------------------------- }}}
 " {{{ Wiki 
 
-augroup wiki_group
-  autocmd!
-  autocmd BufRead,BufNewFile
-        \ *.wiki
-        \ setlocal filetype=wiki
-        \ setlocal foldlevelstart=1
-augroup END
+" augroup wiki_group
+"   autocmd!
+"   autocmd FileType 
+"         \ *.wiki
+"         \ setlocal foldlevelstart=1
+" augroup END
 
 " -------------------------------------------------------------------------- }}}
 " {{{ Yaml 
