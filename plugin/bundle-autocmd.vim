@@ -55,16 +55,6 @@ augroup help_group
 augroup END
 
 " -------------------------------------------------------------------------- }}}
-" {{{ Journal 
-
-augroup journal_group
-  autocmd!
-  autocmd BufRead,BufNewFile
-        \ *.journal
-        \ setlocal filetype=journal
-augroup END
-
-" -------------------------------------------------------------------------- }}}
 " {{{ Json 
 
 augroup json_group
@@ -120,6 +110,17 @@ augroup tex_group
   autocmd BufRead,BufNewFile
         \ *.tex,*.bbl,*.bib,*.texx,*.texb,*.cls
         \ setlocal filetype=tex
+augroup END
+
+" -------------------------------------------------------------------------- }}}
+" {{{ Wiki 
+
+augroup wiki_group
+  autocmd!
+  autocmd BufRead,BufNewFile
+        \ *.wiki
+        \ setlocal filetype=wiki
+        \ setlocal foldlevelstart=1
 augroup END
 
 " -------------------------------------------------------------------------- }}}
