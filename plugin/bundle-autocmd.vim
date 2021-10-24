@@ -11,7 +11,7 @@ let g:loaded_bundle_autocmd=1
 augroup asciidoc_group
   autocmd!
   autocmd BufRead,BufNewFile
-        \ *.adoc,*adoci,*.asciidoc,README
+        \ *.adoc, *.adoci, *.asciidoc
         \ setlocal filetype=asciidoc
 augroup END
 
@@ -54,16 +54,6 @@ augroup json_group
 augroup END
 
 " -------------------------------------------------------------------------- }}}
-" {{{ Markdown
-
-augroup markdown_group
-  autocmd!
-  autocmd BufRead,BufNewFile
-        \ *.md
-        \ setlocal filetype=markdown
-augroup END
-
-" -------------------------------------------------------------------------- }}}
 " {{{ Mutt
 
 augroup mutt_group
@@ -89,7 +79,7 @@ augroup END
 augroup spell_group
   autocmd!
   autocmd FileType
-        \ journal,markdown,md,tex
+        \ journal,tex,wiki
         \ setlocal spell
 augroup END
 
@@ -106,12 +96,11 @@ augroup END
 " -------------------------------------------------------------------------- }}}
 " {{{ Wiki
 
-" augroup wiki_group
-"   autocmd!
-"   autocmd FileType
-"         \ *.wiki
-"         \ setlocal foldlevelstart=1
-" augroup END
+augroup wiki_group
+  autocmd!
+  autocmd FileType *.md, *.markdown, *.wiki setlocal foldlevelstart=1
+  autocmd FileType *.md, *.markdown, *.wiki setlocal filetype=wiki
+augroup END
 
 " -------------------------------------------------------------------------- }}}
 " {{{ Yaml
