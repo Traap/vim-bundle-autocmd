@@ -11,7 +11,7 @@ let g:loaded_bundle_autocmd=1
 augroup asciidoc_group
   autocmd!
   autocmd BufRead,BufNewFile
-        \ *.adoc, *.adoci, *.asciidoc
+        \ *.adoc,*.adoci,*.asciidoc
         \ setlocal filetype=asciidoc
 augroup END
 
@@ -50,7 +50,7 @@ augroup END
 
 augroup json_group
   autocmd!
-  autocmd FileType json syntax match Comment +\/\/.\+$+
+  autocmd FileType *.json syntax match Comment +\/\/.\+$+
 augroup END
 
 " -------------------------------------------------------------------------- }}}
@@ -87,7 +87,7 @@ augroup END
 augroup spell_group
   autocmd!
   autocmd FileType
-        \ journal,tex,wiki
+        \ journal,tex,wiki,yaml
         \ setlocal spell
 augroup END
 
@@ -106,8 +106,8 @@ augroup END
 
 augroup wiki_group
   autocmd!
-  autocmd FileType *.md, *.markdown, *.wiki setlocal foldlevelstart=1
-  autocmd FileType *.md, *.markdown, *.wiki setlocal filetype=wiki
+  autocmd FileType           *.md,*.markdown,*.wiki setlocal foldlevelstart=2
+  autocmd BufRead,BufNewFile *.md,*.markdown,*.wiki setlocal filetype=wiki
 augroup END
 
 " -------------------------------------------------------------------------- }}}
