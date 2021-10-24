@@ -74,6 +74,14 @@ augroup plantuml_group
 augroup END
 
 " -------------------------------------------------------------------------- }}}
+" {{{ Remove whitespaces
+
+augroup RemoveWhiteSpaceGroup
+  autocmd!
+  autocmd BufWritePre * :%s/\s\+$//e
+augroup END
+
+" -------------------------------------------------------------------------- }}}
 " {{{ Spell
 
 augroup spell_group
