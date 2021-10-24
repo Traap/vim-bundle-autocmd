@@ -36,16 +36,7 @@ augroup csv_group
 augroup END
 
 " -------------------------------------------------------------------------- }}}
-" {{{ Diary 
-
-command! Diary VimwikiDiaryIndex
-augroup diary_group
-  autocmd!
-  autocmd BufRead,BufNewFile journal.wiki VimwikiDiaryGenerateLinks
-augroup end
-
-" -------------------------------------------------------------------------- }}}
-" {{{ Help 
+" {{{ Help
 
 augroup help_group
   autocmd!
@@ -55,7 +46,7 @@ augroup help_group
 augroup END
 
 " -------------------------------------------------------------------------- }}}
-" {{{ Json 
+" {{{ Json
 
 augroup json_group
   autocmd!
@@ -63,7 +54,7 @@ augroup json_group
 augroup END
 
 " -------------------------------------------------------------------------- }}}
-" {{{ Markdown 
+" {{{ Markdown
 
 augroup markdown_group
   autocmd!
@@ -83,17 +74,17 @@ augroup mutt_group
 augroup END
 
 " -------------------------------------------------------------------------- }}}
-" {{{ PlantUml 
+" {{{ PlantUml
 
-augroup plantuml_group 
-  autocmd!  
-  autocmd BufRead,BufNewFile *.puml,*.wsd :call InitUmlSettings() 
-  autocmd BufWritePost       *.puml,*.wsd :call GenerateUmlDiagram() 
+augroup plantuml_group
+  autocmd!
+  autocmd BufRead,BufNewFile *.puml,*.wsd :call InitUmlSettings()
+  autocmd BufWritePost       *.puml,*.wsd :call GenerateUmlDiagram()
   autocmd BufLeave           *.puml,*.wsd :call ClearUmlLaunchFlag()
 augroup END
 
 " -------------------------------------------------------------------------- }}}
-" {{{ Spell 
+" {{{ Spell
 
 augroup spell_group
   autocmd!
@@ -113,17 +104,17 @@ augroup tex_group
 augroup END
 
 " -------------------------------------------------------------------------- }}}
-" {{{ Wiki 
+" {{{ Wiki
 
 " augroup wiki_group
 "   autocmd!
-"   autocmd FileType 
+"   autocmd FileType
 "         \ *.wiki
 "         \ setlocal foldlevelstart=1
 " augroup END
 
 " -------------------------------------------------------------------------- }}}
-" {{{ Yaml 
+" {{{ Yaml
 
 augroup yaml_group
   autocmd!
