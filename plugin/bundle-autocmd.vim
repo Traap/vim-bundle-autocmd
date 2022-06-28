@@ -84,12 +84,13 @@ augroup END
 " -------------------------------------------------------------------------- }}}
 " {{{ Spell
 
-augroup spell_group
-  autocmd!
-  autocmd FileType
-        \ journal,tex,wiki,yaml
-        \ setlocal spell
-augroup END
+" Hack: Disable to run a few test.
+" augroup spell_group
+"   autocmd!
+"   autocmd FileType
+"         \ journal,tex,wiki,yaml
+"         \ setlocal spell
+" augroup END
 
 " -------------------------------------------------------------------------- }}}
 " {{{ Tex
