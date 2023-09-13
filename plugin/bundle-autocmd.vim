@@ -68,9 +68,8 @@ augroup END
 
 augroup plantuml_group
   autocmd!
-  autocmd BufRead,BufNewFile *.puml,*.wsd :call InitUmlSettings()
-  autocmd BufWritePost       *.puml,*.wsd :call GenerateUmlDiagram()
-  autocmd BufLeave           *.puml,*.wsd :call ClearUmlLaunchFlag()
+  autocmd BufWritePost       *.puml,*.wsd :call PlantUmlGenerate()
+  autocmd BufLeave           *.puml,*.wsd :call PlantUmlClear()
 augroup END
 
 " -------------------------------------------------------------------------- }}}
