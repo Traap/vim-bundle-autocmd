@@ -108,7 +108,6 @@ augroup wiki_group
   autocmd!
   autocmd FileType           *.md,*.markdown,*.wiki setlocal foldlevelstart=2
   autocmd BufRead,BufNewFile *.md,*.markdown,*.wiki setlocal filetype=wiki
-  autocmd BufRead,BufNewFile *.md,*.markdown,*.wiki :WikiEnable
 augroup END
 
 " -------------------------------------------------------------------------- }}}
