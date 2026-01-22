@@ -68,7 +68,7 @@ augroup END
 
 augroup plantuml_group
   autocmd!
-  autocmd BufWritePost       *.puml,*.wsd :call PlantUmlGenerate()
+  autocmd BufWritePost       *.puml,*.wsd :call PlantUmlAssemble()
   autocmd BufLeave           *.puml,*.wsd :call PlantUmlClear()
 augroup END
 
